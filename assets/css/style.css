@@ -25,6 +25,7 @@
   --primary-color: #17191f;
   --secondary-color: #272a33;
   --gold-color: #d68b43;
+  --white-color: #fff;
   --toggle-color: #ddd;
   --text-color: #323232;
 }
@@ -33,7 +34,7 @@ body {
   font-size: 1rem;
   font-family: "Lato", sans-serif;
   /* font-family: "Roboto", sans-serif; */
-  /* font-family: 'Raleway', sans-serif; */
+  /* font-family: "Raleway", sans-serif; */
   height: 100vh;
   background: var(--corpo-color);
   overflow-x: hidden;
@@ -91,22 +92,27 @@ img {
   border-radius: 0rem 0.625rem 0.625rem 0rem;
 }
 
+/* ==== Navbar Fechada ==== */
+
 .sidebar-container.close {
   transition: all 0.3s;
   width: 4vw;
 }
 
 .sidebar-container.close .logo img {
+  margin: 0.8125rem 0px;
   height: 1.25rem;
 }
 
 .sidebar-container.close .img img {
+  height: 2.5rem;
+  width: 2.5rem;
   margin-left: 0.625rem;
 }
 
 .sidebar-container.close .nome,
 .sidebar-container.close .links span {
-  display: none;
+  opacity: 0;
 }
 
 .sidebar-container.close .menu .links {
@@ -119,12 +125,14 @@ img {
 }
 
 .sidebar-container.close .search-box input {
-  display: none;
+  opacity: 0;
 }
 
 .sidebar-container.close .pesquisa .search-box i {
   border-radius: 0.625rem;
 }
+
+/* ==== Navbar Fechada ==== */
 
 .sidebar-container header {
   position: relative;
@@ -149,6 +157,11 @@ img {
   flex-flow: row wrap;
 }
 
+.sidebar-container .nome {
+  position: absolute;
+  top: 111px;
+}
+
 .sidebar-container .toggle {
   position: absolute;
   transform: rotate(180deg);
@@ -163,6 +176,8 @@ img {
 .sidebar-container .toggle:hover {
   background: var(--gold-color);
 }
+
+/* ==== Sombras para separação ==== */
 
 .separador-sidebar {
   margin: 20px 0rem;
@@ -181,12 +196,17 @@ img {
   min-width: 2.8vw;
 }
 
+/* ==== Sombras para separação ==== */
+
 .sidebar-container .usuario img {
-  width: 2.5rem;
+  height: 3.125rem;
+  width: 3.125rem;
+  border-radius: 100%;
 }
 
 .usuario .nome {
-  font-size: 1rem;
+  padding: 0.3125rem 0rem 0rem 0.625rem;
+  font-size: 1.375rem;
   font-weight: 500;
 }
 
@@ -207,7 +227,6 @@ img {
 .menu .pesquisa .search-box i {
   position: relative;
   font-size: 1.375rem;
-  top: 0.1875rem;
   left: 0.1875rem;
 
   background-color: var(--toggle-color);
@@ -217,7 +236,7 @@ img {
 }
 
 .menu .pesquisa input {
-  position: relative;
+  position: absolute;
 
   background-color: var(--toggle-color);
   font-size: 1rem;
@@ -246,13 +265,17 @@ img {
   border-radius: 1rem;
 }
 
+.sidebar-container.close .links span {
+  position: absolute;
+}
+
 .menu .links:hover {
   background-color: var(--gold-color);
 }
 
 .menu .links:hover i,
 .menu .links:hover span {
-  color: #fff;
+  color: var(--white-color);
   font-weight: 700;
   transition: all 0.3s;
 }
