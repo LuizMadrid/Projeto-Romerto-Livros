@@ -86,14 +86,61 @@ img {
   background: var(--sidebar-color);
   color: var(--text-color);
   position: fixed;
+  transition: all 0.3s;
 
-  border: 0.125rem solid #17191f33;
   border-radius: 0rem 0.625rem 0.625rem 0rem;
+}
+
+.sidebar-container.close {
+  transition: all 0.3s;
+  width: 4vw;
+}
+
+.sidebar-container.close .logo img {
+  height: 1.25rem;
+}
+
+.sidebar-container.close .img img {
+  margin-left: 0.625rem;
+}
+
+.sidebar-container.close .nome,
+.sidebar-container.close .links span {
+  display: none;
+}
+
+.sidebar-container.close .menu .links {
+  max-width: 3.9375rem;
+}
+
+.sidebar-container.close .toggle {
+  right: -35%;
+  transform: rotate(0deg);
+}
+
+.sidebar-container.close .search-box input {
+  display: none;
+}
+
+.sidebar-container.close .pesquisa .search-box i {
+  border-radius: 0.625rem;
 }
 
 .sidebar-container header {
   position: relative;
   margin: 0% 5%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 1.125rem;
+}
+
+.logo img {
+  height: 2.8125rem;
 }
 
 .sidebar-container .usuario {
@@ -104,13 +151,13 @@ img {
 
 .sidebar-container .toggle {
   position: absolute;
+  transform: rotate(180deg);
   font-size: 20px;
   right: -12%;
   padding: 0.3125rem 0.625rem;
   background: var(--toggle-color);
 
-  border: 1px solid #17191f33;
-  border-radius: 0.625rem;
+  border-radius: 3.125rem;
 }
 
 .sidebar-container .toggle:hover {
@@ -118,7 +165,6 @@ img {
 }
 
 .separador-sidebar {
-  padding: 0px 130px;
   margin: 20px 0rem;
   background: linear-gradient(
     90deg,
@@ -129,8 +175,10 @@ img {
     #8b8b8b00
   );
   border: 2px solid none;
-  min-height: 0.0625rem;
-  max-height: 0.0625rem;
+
+  height: 0.1rem;
+  max-width: 16vw;
+  min-width: 2.8vw;
 }
 
 .sidebar-container .usuario img {
@@ -142,8 +190,10 @@ img {
   font-weight: 500;
 }
 
-.menu i {
+.links i {
   color: var(--text-color);
+  text-align: center;
+  min-width: 60px;
   font-size: 1.375rem;
   padding: 1rem;
   border-radius: 1.25rem;
@@ -156,7 +206,8 @@ img {
 
 .menu .pesquisa .search-box i {
   position: relative;
-  top: 0.0375rem;
+  font-size: 1.375rem;
+  top: 0.1875rem;
   left: 0.1875rem;
 
   background-color: var(--toggle-color);
@@ -167,7 +218,6 @@ img {
 
 .menu .pesquisa input {
   position: relative;
-  top: -0.1875rem;
 
   background-color: var(--toggle-color);
   font-size: 1rem;
@@ -186,10 +236,9 @@ img {
   color: var(--text-color);
 }
 
-.menu li a {
+.menu-links a {
   text-decoration: none;
   color: var(--text-color);
-  padding: 0.9375rem 140px 0.9375rem 0rem;
 }
 
 .menu .links {
