@@ -28,16 +28,18 @@
           <!-- ==== WEBSITE LOGO ==== -->
 
           <!-- ==== USUARIO LOGO E NOME ==== -->
+          <div class="separador-sidebar"></div>
           <div class="usuario">
             <span class="img">
               <img src="assets/img/Logo.png" alt="Usuario" />
             </span>
 
-            <div class="texto header-texto">
+            <div>
               <span class="nome">Luiz Madrid</span>
             </div>
             <i class="fa-solid fa-arrow-right toggle"></i>
           </div>
+          <div class="separador-sidebar"></div>
 
           <!-- ==== USUARIO LOGO E NOME ==== -->
 
@@ -45,28 +47,37 @@
           <div class="menubar-container">
             <div class="menu">
               <ul class="pesquisa">
-                <li>
-                  <i class="fa-solid fa-magnifying-glass icons"></i>
+                <li class="search-box">
+                  <label for="search-id"
+                    ><i class="fa-solid fa-magnifying-glass"></i
+                  ></label>
                   <input
                     type="search"
-                    placeholder="Pesquise..."
-                    name=""
-                    id="" />
+                    placeholder="  Pesquisar"
+                    name="search-name"
+                    id="search-id" />
                 </li>
               </ul>
 
               <ul class="menu-links">
-                <li>
+                <li class="links">
                   <a href="#">
-                    <i class="fa-solid fa-house icons"></i>
+                    <i class="fa-solid fa-house"></i>
                     <span>Home</span>
                   </a>
                 </li>
 
-                <li>
+                <li class="links">
                   <a href="#">
+                    <i class="fa-solid fa-book-open"></i>
                     <span>Livros</span>
                   </a>
+                </li>
+
+                <div class="separador-sidebar"></div>
+                <li class="links">
+                  <i class="fa-solid fa-right-from-bracket fa-rotate-180"></i>
+                  <span>Sair</span>
                 </li>
               </ul>
             </div>
