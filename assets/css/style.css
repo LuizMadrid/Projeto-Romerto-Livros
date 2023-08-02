@@ -87,7 +87,6 @@ img {
   background: var(--sidebar-color);
   color: var(--text-color);
   position: fixed;
-  transition: all 0.3s;
 
   border-radius: 0rem 0.625rem 0.625rem 0rem;
 }
@@ -107,7 +106,6 @@ img {
 .sidebar-container.close .img img {
   height: 2.5rem;
   width: 2.5rem;
-  margin-left: 0.625rem;
 }
 
 .sidebar-container.close .nome,
@@ -130,6 +128,11 @@ img {
 
 .sidebar-container.close .pesquisa .search-box i {
   border-radius: 0.625rem;
+}
+
+.sidebar-container.close .sidebar-links:hover::after {
+  opacity: 1;
+  display: block;
 }
 
 /* ==== Navbar Fechada ==== */
@@ -164,6 +167,7 @@ img {
 
 .sidebar-container .toggle {
   position: absolute;
+  cursor: pointer;
   transform: rotate(180deg);
   font-size: 20px;
   right: -12%;
@@ -199,13 +203,14 @@ img {
 /* ==== Sombras para separação ==== */
 
 .sidebar-container .usuario img {
-  height: 3.125rem;
-  width: 3.125rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-left: 0.625rem;
   border-radius: 100%;
 }
 
 .usuario .nome {
-  padding: 0.3125rem 0rem 0rem 0.625rem;
+  padding: 0rem 0rem 0rem 0.625rem;
   font-size: 1.375rem;
   font-weight: 500;
 }
@@ -258,6 +263,7 @@ img {
 .menu-links a {
   text-decoration: none;
   color: var(--text-color);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .menu .links {
@@ -278,4 +284,37 @@ img {
   color: var(--white-color);
   font-weight: 700;
   transition: all 0.3s;
+}
+
+.menu-links a:nth-child(1)::after {
+  content: "Home";
+}
+
+.menu-links a:nth-child(2)::after {
+  content: "Perfil";
+}
+
+.menu-links a:nth-child(3)::after {
+  content: "Livros";
+}
+
+.menu-links a:nth-child(4)::after {
+  content: "Notificações";
+}
+
+.sidebar-links::after {
+  position: absolute;
+  z-index: 15;
+  width: 7.5rem;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  background-color: var(--gold-color);
+  border-radius: 0.5rem;
+  padding: 0.625rem;
+  left: 6.25rem;
+  opacity: 0;
+  display: none;
+  transform: translateY(-4.0625rem);
+  transition: all 0.2s ease 0s;
 }
