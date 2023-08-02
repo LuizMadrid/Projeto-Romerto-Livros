@@ -88,7 +88,8 @@ img {
   color: var(--text-color);
   position: fixed;
 
-  border-radius: 0rem 0.625rem 0.625rem 0rem;
+  border-radius: 0rem 1.25rem 1.25rem 0rem;
+  box-shadow: 0.375rem 0.375rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 /* ==== Navbar Fechada ==== */
@@ -120,6 +121,7 @@ img {
 .sidebar-container.close .toggle {
   right: -35%;
   transform: rotate(0deg);
+  box-shadow: 0.625rem 0.25rem 1rem rgba(0, 0, 0, 0.4);
 }
 
 .sidebar-container.close .search-box input {
@@ -168,12 +170,13 @@ img {
 .sidebar-container .toggle {
   position: absolute;
   cursor: pointer;
+
   transform: rotate(180deg);
   font-size: 20px;
   right: -12%;
   padding: 0.3125rem 0.625rem;
   background: var(--toggle-color);
-
+  box-shadow: -0.875rem -0.25rem 1rem rgba(0, 0, 0, 0.4);
   border-radius: 3.125rem;
 }
 
@@ -358,3 +361,5 @@ img {
 .login a:hover {
   color: var(--gold-color);
 }
+
+/* Fim da customização do botão de login */
