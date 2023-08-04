@@ -441,7 +441,7 @@ img {
   transition: 0.3s all ease-in-out;
 }
 
-.livro-box:hover img {
+.livro-box .livro-img:hover img {
   transform: scale(1.1);
   transition: 0.3s all ease-in-out;
 }
