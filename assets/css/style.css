@@ -430,8 +430,9 @@ img {
 
 .livro-img {
   width: 150px;
+  height: 235px;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 
 .livro-box .livro-img img {
@@ -442,7 +443,7 @@ img {
 }
 
 .livro-box .livro-img:hover img {
-  transform: scale(1.1);
+  transform: scale(1.06);
   transition: 0.3s all ease-in-out;
 }
 
