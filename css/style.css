@@ -4,7 +4,7 @@
 *
 */
 
-/* ----------xxx---------- */
+/* ========########======== */
 
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
@@ -60,7 +60,7 @@ img {
   pointer-events: none;
 }
 
-/* --------xxxx-------- */
+/* ========########======== */
 
 /* ==== CSS's Reusáveis ==== */
 
@@ -100,7 +100,7 @@ img {
 
 /* ==== CSS's Reusáveis ==== */
 
-/* --------xxxx-------- */
+/* ========########======== */
 
 /* Inicio da customização da navbar */
 
@@ -351,6 +351,8 @@ img {
 
 /* Fim da customização da navbar */
 
+/* ========########======== */
+
 /* Inicio da customização do botão de login */
 
 .login {
@@ -386,6 +388,8 @@ img {
 }
 
 /* Fim da customização do botão de login */
+
+/* ========########======== */
 
 /* Começo da customização da sessão home */
 
